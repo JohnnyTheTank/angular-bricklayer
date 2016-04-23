@@ -13,7 +13,8 @@ AngularJS module for [ademilter's bricklayer](https://github.com/ademilter/brick
 1. Install via either [bower](http://bower.io/), [npm](https://www.npmjs.com/) or downloaded files:
     1. via bower: `bower install --save angular-bricklayer`
     2. via npm: `npm install --save angular-bricklayer`
-    3. via [downloaded files](https://github.com/JohnnyTheTank/angular-bricklayer/zipball/master)
+    3. via CDN (jsDelivr)
+    4. via [downloaded files](https://github.com/JohnnyTheTank/angular-bricklayer/zipball/master)
 
 2. Include dependencies and angular-bricklayer in your HTML.
     1. When using bower
@@ -28,7 +29,13 @@ AngularJS module for [ademilter's bricklayer](https://github.com/ademilter/brick
     <script src="node_modules/bricklayer/dist/bricklayer.min.js"></script>
     <script src="node_modules/angular-bricklayer/dist/angular-bricklayer.min.js"></script>
     ```
-    3. When using downloaded files
+    3. When using CDN
+    ```html
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bricklayer/0.2.4/bricklayer.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bricklayer/0.2.4/bricklayer.min.js"></script>
+    <script src="//cdn.jsdelivr.net/angular.bricklayer/1.0.0/angular-bricklayer.min.js"></script>
+    ```
+    4. When using downloaded files
     ```html
     <link rel="stylesheet" href="YOUR_PATH/bricklayer.min.css">
     <script src="YOUR_PATH/bricklayer.min.js"></script>
