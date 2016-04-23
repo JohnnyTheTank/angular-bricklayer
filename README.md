@@ -71,13 +71,17 @@ AngularJS module for [ademilter's bricklayer](https://github.com/ademilter/brick
 
 ## Add bricks dynamically
 
+Use `bricklayer-append` or `bricklayer-prepend` as attribute, class or element name inside of your `bricklayer` instance
+
 ```html
 <div class="bricklayer">
     <!-- append -->
     <div bricklayer-append ng-repeat="item in appendData"></div>
 
     <!-- prepend -->
-    <div bricklayer-prepend ng-repeat="item in prepedData"></div>
+    <div bricklayer-prepend ng-repeat="item in prependData"></div>
 </div>
-
 ```
+
+# License
+MIT
