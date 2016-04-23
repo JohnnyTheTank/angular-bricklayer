@@ -5,7 +5,8 @@
     "Jonathan Hornung <jonathan.hornung@gmail.com>"
   ],
   "description": "AngularJS module for bricklayer, a lightweight & independent cascading grid layout library",
-  "main": "",
+  "main": "dist/angular-bricklayer.js",
+  "version": "1.0.0",
   "moduleType": [],
   "keywords": [
     "angular",
@@ -24,6 +25,9 @@
     "demo"
   ],
   "license": "MIT",
+  "devDependencies": {
+    "angular": "^1.5.3"
+  },
   "dependencies": {
     "bricklayer": "^0.3.0"
   }

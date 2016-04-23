@@ -1,3 +1,10 @@
+/**
+    @name: angular-bricklayer 
+    @version: 1.0.0 (23-04-2016) 
+    @author:  
+    @url: https://github.com/JohnnyTheTank/angular-bricklayer 
+    @license: MIT
+*/
 angular.module('jtt_bricklayer', [])
     .directive('bricklayer', function () {
         return {

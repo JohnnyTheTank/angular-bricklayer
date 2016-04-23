@@ -8,16 +8,40 @@
     <title>angular-bricklayer</title>
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bricklayer/0.2.4/bricklayer.min.css">
-
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/bricklayer/0.2.4/bricklayer.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.3/angular.min.js"></script>
+
+    <!--
+    <link rel="stylesheet" href="../bower_components/bricklayer/dist/bricklayer.min.css">
+    <script src="../bower_components/bricklayer/dist/bricklayer.min.js"></script>
+    <script src="../bower_components/angular/angular.min.js"></script>
+    -->
+
 
     <script src="app.js"></script>
-    <script src="../src/angular-bricklayer.js"></script>
+    <script src="../dist/angular-bricklayer.js"></script>
 
     <style>
-        .bricklayer-column-sizer {
-            width: 10%;
+        /* Bricklayer calculates its column sizes  from the `bricklayer-column-sizer` element. You can give it some width with media queries to make it responsive */
+        @media screen and (min-width: 300px) {
+            .bricklayer-column-sizer {
+                /* If page is greater than 300px, columns will be 20% wide. */
+                width: 20%;
+            }
+        }
+
+        @media screen and (min-width: 400px) {
+            .bricklayer-column-sizer {
+                /* If page is greater than 400px, columns will be 10% wide, which are more narrow. */
+                width: 10%;
+            }
+        }
+
+        @media screen and (min-width: 700px) {
+            .bricklayer-column-sizer {
+                /* If page is greater than 700px, columns will be 5% wide. That means there will be lots of columns */
+                width: 5%;
+            }
         }
 
         .box {
@@ -26,35 +50,18 @@
     </style>
 
 </head>
-<body ng-app="app">
+<body ng-app="app" ng-controller="appController">
 
 <!-- Bricklayer needs to have "bricklayer" class name. -->
+
 <div class="bricklayer">
     <div class="box" style="background-color: red; height: 100px"></div>
     <div class="box" style="background-color: green; height: 70px"></div>
     <div class="box" style="background-color: blue; height: 30px"></div>
     <div class="box" style="background-color: orange; height: 40px"></div>
-    <div class="box" style="background-color: red; height: 100px"></div>
-    <div class="box" style="background-color: green; height: 70px"></div>
-    <div class="box" style="background-color: blue; height: 30px"></div>
-    <div class="box" style="background-color: orange; height: 40px"></div>
-    <div class="box" style="background-color: red; height: 100px"></div>
-    <div class="box" style="background-color: green; height: 70px"></div>
-    <div class="box" style="background-color: blue; height: 30px"></div>
-    <div class="box" style="background-color: orange; height: 40px"></div>
-    <div class="box" style="background-color: red; height: 100px"></div>
-    <div class="box" style="background-color: green; height: 70px"></div>
-    <div class="box" style="background-color: blue; height: 30px"></div>
-    <div class="box" style="background-color: orange; height: 40px"></div>
-    <div class="box" style="background-color: red; height: 100px"></div>
-    <div class="box" style="background-color: green; height: 70px"></div>
-    <div class="box" style="background-color: blue; height: 30px"></div>
-    <div class="box" style="background-color: orange; height: 40px"></div>
-    <div class="box" style="background-color: red; height: 100px"></div>
-    <div class="box" style="background-color: green; height: 70px"></div>
-    <div class="box" style="background-color: blue; height: 30px"></div>
-    <div class="box" style="background-color: orange; height: 40px"></div>
+    <div class="box" bricklayer-append style="background-color: {{item.color}}; height: {{item.height + 'px'}}" ng-repeat="item in data"></div>
 </div>
+
 
 </body>
 </html>
