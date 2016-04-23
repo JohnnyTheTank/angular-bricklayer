@@ -8,6 +8,8 @@ AngularJS module for [ademilter's bricklayer](https://github.com/ademilter/brick
 - [Simple demo](https://rawgit.com/JohnnyTheTank/angular-bricklayer/master/demo/index.html)
 - [on Plnkr](http://plnkr.co/edit/mo3G36)
 
+[![Image](https://rawgit.com/ademilter/bricklayer/master/assets/screenshot.gif)](http://ademilter.github.io/bricklayer)
+
 ## Installation
 
 1. Install via either [bower](http://bower.io/), [npm](https://www.npmjs.com/) or downloaded files:
