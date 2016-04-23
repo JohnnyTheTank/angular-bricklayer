@@ -6,6 +6,7 @@ AngularJS module for [ademilter's bricklayer](https://github.com/ademilter/brick
 
 ## Demos
 - [Simple demo](https://rawgit.com/JohnnyTheTank/angular-bricklayer/master/demo/index.html)
+- [on Plnkr](http://plnkr.co/edit/mo3G36)
 
 ## Installation
 
