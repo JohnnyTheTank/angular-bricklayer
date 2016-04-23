@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
 
     <title>angular-bricklayer</title>
 
@@ -25,27 +26,33 @@
         /* Bricklayer calculates its column sizes  from the `bricklayer-column-sizer` element. You can give it some width with media queries to make it responsive */
         @media screen and (min-width: 300px) {
             .bricklayer-column-sizer {
-                /* If page is greater than 300px, columns will be 20% wide. */
-                width: 20%;
+                width: 33.333%;
             }
         }
 
         @media screen and (min-width: 400px) {
             .bricklayer-column-sizer {
-                /* If page is greater than 400px, columns will be 10% wide, which are more narrow. */
-                width: 10%;
+                width: 25%;
             }
         }
 
         @media screen and (min-width: 700px) {
             .bricklayer-column-sizer {
-                /* If page is greater than 700px, columns will be 5% wide. That means there will be lots of columns */
-                width: 5%;
+                width: 20%;
             }
         }
 
         .box {
             margin: 10px 0;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border: 1px solid black;
+            display:block;
         }
     </style>
 
@@ -54,14 +61,13 @@
 
 <!-- Bricklayer needs to have "bricklayer" class name. -->
 
-<div class="bricklayer">
-    <div class="box" style="background-color: red; height: 100px"></div>
-    <div class="box" style="background-color: green; height: 70px"></div>
-    <div class="box" style="background-color: blue; height: 30px"></div>
-    <div class="box" style="background-color: orange; height: 40px"></div>
-    <div class="box" bricklayer-append style="background-color: {{item.color}}; height: {{item.height + 'px'}}" ng-repeat="item in data"></div>
-</div>
+<button ng-click="appendNew()"><strong>Append Item</strong></button>
 
+<div class="bricklayer">
+    <div class="box" bricklayer-append ng-repeat="item in data" style="background-color: {{item.color}};">
+        <img ng-src="http://lorempixel.com/{{item.width}}/{{item.height}}">
+    </div>
+</div>
 
 </body>
 </html>
