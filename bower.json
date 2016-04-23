@@ -6,7 +6,7 @@
   ],
   "description": "AngularJS module for bricklayer, a lightweight & independent cascading grid layout library",
   "main": "dist/angular-bricklayer.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "moduleType": [],
   "keywords": [
     "angular",
