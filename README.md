@@ -42,7 +42,7 @@ AngularJS module for [ademilter's bricklayer](https://github.com/ademilter/brick
     <script src="YOUR_PATH/angular-bricklayer.min.js"></script>
     ```
 
-3. Add `jtt_bricklayer` to your application's module dependencies.
+3. Add **`jtt_bricklayer`** to your application's module dependencies, like this:<br>`angular.module('app', ['jtt_bricklayer']);`
 
 ## Usage
 
