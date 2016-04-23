@@ -1,0 +1,30 @@
+{
+  "name": "angular-bricklayer",
+  "homepage": "https://github.com/JohnnyTheTank/angular-bricklayer",
+  "authors": [
+    "Jonathan Hornung <jonathan.hornung@gmail.com>"
+  ],
+  "description": "AngularJS module for bricklayer, a lightweight & independent cascading grid layout library",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "angular",
+    "angularjs",
+    "grid",
+    "bricklayer",
+    "masonry"
+  ],
+  "ignore": [
+    "**/.*",
+    "src",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "demo"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bricklayer": "^0.3.0"
+  }
+}
