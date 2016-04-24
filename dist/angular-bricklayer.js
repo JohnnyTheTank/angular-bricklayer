@@ -1,6 +1,6 @@
 /**
     @name: angular-bricklayer 
-    @version: 1.0.1 (24-04-2016) 
+    @version: 1.0.2 (24-04-2016) 
     @author:  
     @url: https://github.com/JohnnyTheTank/angular-bricklayer 
     @license: MIT
@@ -13,30 +13,21 @@ angular.module('jtt_bricklayer', [])
                 var bricklayer = new Bricklayer(element[0]);
 
                 $timeout(function () {
-                    bricklayer.reorderElements(bricklayer.columnCount);
+                    bricklayer.redraw();
                 });
 
                 scope.$on('bricklayer.append', function (event, element) {
                     bricklayer.append(element);
-                    bricklayer.reorderElements(bricklayer.columnCount);
-                    $timeout(function () {
-                        bricklayer.reorderElements(bricklayer.columnCount);
-                    });
+                    bricklayer.redraw();
                 });
 
                 scope.$on('bricklayer.prepend', function (event, element) {
                     bricklayer.prepend(element);
-                    bricklayer.reorderElements(bricklayer.columnCount);
-                    $timeout(function () {
-                        bricklayer.reorderElements(bricklayer.columnCount);
-                    });
+                    bricklayer.redraw();
                 });
 
-                scope.$on('bricklayer.reorderElements', function () {
-                    bricklayer.reorderElements(bricklayer.columnCount);
-                    $timeout(function () {
-                        bricklayer.reorderElements(bricklayer.columnCount);
-                    });
+                scope.$on('bricklayer.redraw', function () {
+                    bricklayer.redraw();
                 });
             }
         }
