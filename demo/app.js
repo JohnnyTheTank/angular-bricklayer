@@ -16,6 +16,10 @@ angular.module('app')
             $scope.data.push($scope.createElement());
         };
 
+        $scope.reorderElements = function () {
+            $scope.$emit('bricklayer.reorderElements');
+        };
+
         var sizes = [220, 250, 260, 270, 290, 300, 310, 330, 400, 430, 450, 480, 500];
 
         for (var i = 0; i < 10; i++) {
