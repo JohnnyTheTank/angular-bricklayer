@@ -34,6 +34,6 @@
     "grunt-contrib-watch": "^0.6.1"
   },
   "dependencies": {
-    "bricklayer": "^0.3.3"
+    "bricklayer": "^0.4.1"
   }
 }
