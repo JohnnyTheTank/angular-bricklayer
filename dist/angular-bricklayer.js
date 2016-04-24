@@ -1,6 +1,6 @@
 /**
     @name: angular-bricklayer 
-    @version: 1.0.1 (23-04-2016) 
+    @version: 1.0.1 (24-04-2016) 
     @author:  
     @url: https://github.com/JohnnyTheTank/angular-bricklayer 
     @license: MIT
@@ -9,20 +9,19 @@ angular.module('jtt_bricklayer', [])
     .directive('bricklayer', ['$timeout', function ($timeout) {
         return {
             restrict: 'C',
-            replace: 'false',
             link: function (scope, element, attrs) {
                 var bricklayer = new Bricklayer(element[0]);
 
                 $timeout(function () {
                     bricklayer.reorderElements(bricklayer.columnCount);
-                }, 0);
+                });
 
                 scope.$on('bricklayer.append', function (event, element) {
                     bricklayer.append(element);
                     bricklayer.reorderElements(bricklayer.columnCount);
                     $timeout(function () {
                         bricklayer.reorderElements(bricklayer.columnCount);
-                    }, 0);
+                    });
                 });
 
                 scope.$on('bricklayer.prepend', function (event, element) {
@@ -30,7 +29,14 @@ angular.module('jtt_bricklayer', [])
                     bricklayer.reorderElements(bricklayer.columnCount);
                     $timeout(function () {
                         bricklayer.reorderElements(bricklayer.columnCount);
-                    }, 0);
+                    });
+                });
+
+                scope.$on('bricklayer.reorderElements', function () {
+                    bricklayer.reorderElements(bricklayer.columnCount);
+                    $timeout(function () {
+                        bricklayer.reorderElements(bricklayer.columnCount);
+                    });
                 });
             }
         }
@@ -39,7 +45,6 @@ angular.module('jtt_bricklayer', [])
         return {
             require: '?bricklayer',
             restrict: 'ACE',
-            replace: 'false',
             link: function (scope, element, attrs) {
                 scope.$emit('bricklayer.append', element[0]);
             }
@@ -49,7 +54,6 @@ angular.module('jtt_bricklayer', [])
         return {
             require: '?bricklayer',
             restrict: 'ACE',
-            replace: 'false',
             link: function (scope, element, attrs) {
                 scope.$emit('bricklayer.prepend', element[0]);
             }

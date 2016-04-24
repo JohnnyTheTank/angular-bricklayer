@@ -1,8 +1,8 @@
 angular.module('app', ['jtt_bricklayer']);
 
 angular.module('app')
-    .controller("appController", function ($scope, $timeout) {
-        $scope.createElement = function (position) {
+    .controller("appController", function ($scope) {
+        $scope.createElement = function () {
             return {
                 color: '#' + Math.random().toString(16).substr(-6),
                 height: sizes[Math.floor(Math.random() * sizes.length)],
