@@ -12,24 +12,15 @@ angular.module('jtt_bricklayer', [])
                 scope.$on('bricklayer.append', function (event, element) {
                     bricklayer.append(element);
                     bricklayer.redraw();
-                    $timeout(function () {
-                        bricklayer.redraw();
-                    });
                 });
 
                 scope.$on('bricklayer.prepend', function (event, element) {
                     bricklayer.prepend(element);
                     bricklayer.redraw();
-                    $timeout(function () {
-                        bricklayer.redraw();
-                    });
                 });
 
-                scope.$on('bricklayer.reorderElements', function () {
+                scope.$on('bricklayer.redraw', function () {
                     bricklayer.redraw();
-                    $timeout(function () {
-                        bricklayer.redraw();
-                    });
                 });
             }
         }
