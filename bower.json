@@ -29,6 +29,6 @@
     "angular": "^1.5.3"
   },
   "dependencies": {
-    "bricklayer": "^0.3.0"
+    "bricklayer": "^0.3.3"
   }
 }
