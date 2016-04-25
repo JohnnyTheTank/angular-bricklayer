@@ -96,5 +96,8 @@ Use `bricklayer-append` or `bricklayer-prepend` as attribute, class or element n
 </div>
 ```
 
+## Images
+Since v1.1.0 the grid gets redrawn on each image load
+
 # License
 MIT
