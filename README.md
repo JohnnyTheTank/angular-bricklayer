@@ -50,8 +50,7 @@ AngularJS module for [ademilter's bricklayer](https://github.com/ademilter/brick
     ```
 
 ## Usage
-
-- Create a simple list:
+Create a simple list and set the css class `bricklayer` like this
 
 ```html
 <div class="bricklayer">
@@ -64,7 +63,7 @@ AngularJS module for [ademilter's bricklayer](https://github.com/ademilter/brick
 </div>
 ```
 
-- Define **bricklayer column size**:
+Define **bricklayer column size**:
 
 ```css
 @media screen and (min-width: 1200px) {
