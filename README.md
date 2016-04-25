@@ -5,7 +5,8 @@ AngularJS module for [ademilter's bricklayer](https://github.com/ademilter/brick
 [![Bower version](https://badge.fury.io/bo/angular-bricklayer.svg)](https://badge.fury.io/bo/angular-bricklayer)
 
 ## Demos
-- [Simple demo](https://rawgit.com/JohnnyTheTank/angular-bricklayer/master/demo/index.html) ([on Plnkr](http://plnkr.co/edit/mo3G36))
+- [Simple demo on GitHub](https://rawgit.com/JohnnyTheTank/angular-bricklayer/master/demo/index.html)
+- [Simple demo on Plnkr](http://plnkr.co/edit/mo3G36) 
 - [Demo with images from flickr](https://rawgit.com/JohnnyTheTank/apiNG-design-bricklayer/master/demo/index.html) (made with [apiNG](https://github.com/JohnnyTheTank/apiNG))
 
 [![Image](https://rawgit.com/ademilter/bricklayer/master/assets/screenshot.gif)](http://ademilter.github.io/bricklayer)
