@@ -33,7 +33,7 @@ angular.module('jtt_bricklayer', [])
                     bricklayer.redraw();
                 });
             },
-            controller: function ($scope) {
+            controller: function () {
             }
         }
     }])

@@ -22,5 +22,4 @@ angular.module('app')
             $scope.appendNew();
         }
 
-
     });
