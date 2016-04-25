@@ -22,12 +22,13 @@ angular.module('jtt_bricklayer', [])
                 scope.$on('bricklayer.redraw', function () {
                     bricklayer.redraw();
                 });
-            }
+            },
+            controller: function ($scope) {}
         }
     }])
     .directive('bricklayerAppend', function () {
         return {
-            require: '?bricklayer',
+            require: '^^bricklayer',
             restrict: 'ACE',
             link: function (scope, element, attrs) {
                 scope.$emit('bricklayer.append', element[0]);
@@ -36,7 +37,7 @@ angular.module('jtt_bricklayer', [])
     })
     .directive('bricklayerPrepend', function () {
         return {
-            require: '?bricklayer',
+            require: '^^bricklayer',
             restrict: 'ACE',
             link: function (scope, element, attrs) {
                 scope.$emit('bricklayer.prepend', element[0]);
