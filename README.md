@@ -50,7 +50,7 @@ AngularJS module for [ademilter's bricklayer](https://github.com/ademilter/brick
     ```
 
 ## Usage
-Create a simple list and set the css class `bricklayer` like this
+Create a simple list and set the css class **`bricklayer`** like this
 
 ```html
 <div class="bricklayer">
