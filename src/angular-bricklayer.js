@@ -5,25 +5,36 @@ angular.module('jtt_bricklayer', [])
             link: function (scope, element, attrs) {
                 var bricklayer = new Bricklayer(element[0]);
 
+                imagesLoaded(element[0], function () {
+                    bricklayer.redraw();
+                });
+
                 $timeout(function () {
                     bricklayer.redraw();
                 });
 
-                scope.$on('bricklayer.append', function (event, element) {
-                    bricklayer.append(element);
+                scope.$on('bricklayer.append', function (event, selectedElement) {
+                    bricklayer.append(selectedElement[0]);
                     bricklayer.redraw();
+                    imagesLoaded(selectedElement, function () {
+                        bricklayer.redraw();
+                    });
                 });
 
-                scope.$on('bricklayer.prepend', function (event, element) {
-                    bricklayer.prepend(element);
+                scope.$on('bricklayer.prepend', function (event, selectedElement) {
+                    bricklayer.prepend(selectedElement[0]);
                     bricklayer.redraw();
+                    imagesLoaded(selectedElement, function () {
+                        bricklayer.redraw();
+                    });
                 });
 
                 scope.$on('bricklayer.redraw', function () {
                     bricklayer.redraw();
                 });
             },
-            controller: function ($scope) {}
+            controller: function ($scope) {
+            }
         }
     }])
     .directive('bricklayerAppend', function () {
@@ -31,7 +42,7 @@ angular.module('jtt_bricklayer', [])
             require: '^^bricklayer',
             restrict: 'ACE',
             link: function (scope, element, attrs) {
-                scope.$emit('bricklayer.append', element[0]);
+                scope.$emit('bricklayer.append', element);
             }
         }
     })
@@ -40,7 +51,7 @@ angular.module('jtt_bricklayer', [])
             require: '^^bricklayer',
             restrict: 'ACE',
             link: function (scope, element, attrs) {
-                scope.$emit('bricklayer.prepend', element[0]);
+                scope.$emit('bricklayer.prepend', element);
             }
         }
     });
