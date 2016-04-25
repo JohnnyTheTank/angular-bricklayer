@@ -29,6 +29,7 @@
     "angular": "^1.5.5"
   },
   "dependencies": {
-    "bricklayer": "^0.4.1"
+    "bricklayer": "^0.4.1",
+    "imagesloaded": "^4.1.0"
   }
 }
