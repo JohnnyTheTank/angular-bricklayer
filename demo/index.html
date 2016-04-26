@@ -65,7 +65,7 @@
 
 <!-- Bricklayer needs to have "bricklayer" class name. -->
 <div class="bricklayer">
-    <div class="box" bricklayer-append ng-repeat="item in data" style="background-color: {{item.color}};">
+    <div class="box" bricklayer-append ng-repeat="item in data" style="background-color: {{item.color}};" ng-cloak>
         <!--<img ng-src="http://lorempixel.com/{{item.width}}/{{item.height}}">-->
         <img ng-src="http://placehold.it/{{item.width}}x{{item.height}}">
     </div>
