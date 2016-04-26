@@ -54,13 +54,13 @@ AngularJS module for [ademilter's bricklayer](https://github.com/ademilter/brick
 Create a simple list and set the css class **`bricklayer`** like this
 
 ```html
-<div class="bricklayer">
-  <div>Your item</div>
-  <div>Your another item</div>
-  <div>Your another but long item</div>
-  <div>Your another but very short item</div>
-  <div>Your one more item</div>
-  <div>Your smallest item</div>
+<div class="bricklayer" ng-cloak>
+    <div>Your item</div>
+    <div>Your another item</div>
+    <div>Your another but long item</div>
+    <div>Your another but very short item</div>
+    <div>Your one more item</div>
+    <div>Your smallest item</div>
 </div>
 ```
 
@@ -87,12 +87,12 @@ Define **bricklayer column size**:
 Use `bricklayer-append` or `bricklayer-prepend` as attribute, class or element name inside of your `bricklayer` instance
 
 ```html
-<div class="bricklayer">
+<div class="bricklayer" ng-cloak>
     <!-- append -->
-    <div bricklayer-append ng-repeat="item in appendData"></div>
+    <div bricklayer-append ng-repeat="item in appendData" ng-cloak></div>
 
     <!-- prepend -->
-    <div bricklayer-prepend ng-repeat="item in prependData"></div>
+    <div bricklayer-prepend ng-repeat="item in prependData" ng-cloak></div>
 </div>
 ```
 
