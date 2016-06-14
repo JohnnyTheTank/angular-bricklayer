@@ -34,8 +34,8 @@ AngularJS module for [ademilter's bricklayer](https://github.com/ademilter/brick
     ```
     3. When using CDN
     ```html
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bricklayer/0.4.1/bricklayer.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/bricklayer/0.4.1/bricklayer.min.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bricklayer/0.4.2/bricklayer.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bricklayer/0.4.2/bricklayer.min.js"></script>
     <script src="//cdn.jsdelivr.net/angular.bricklayer/1.1.0/angular-bricklayer.min.js"></script>
     ```
     4. When using downloaded files
